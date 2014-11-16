@@ -1,0 +1,582 @@
+/* 
+Theme Name: B&W 2014
+Author: Jem Gallego
+ */
+
+@import url('css/reset.css');
+
+/**************************************************************************************
+    + FONT FACE
+    + GENERAL
+    + HEADER
+    + FOOTER 
+    + HOMEPAGE
+    ++ RESPONSIVE GRID
+    ++ FEATURED WORK - SINGLE
+	+ ABOUT
+	+ CONTACT
+
+    + MEDIA QUERIES
+
+***************************************************************************************/
+
+/************************************** FONT FACE ***************************************/
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('fonts/Sofia/SofiaProLight-webfont.eot');
+    src: url('fonts/Sofia/SofiaProLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Sofia/SofiaProLight-webfont.woff') format('woff'),
+         url('fonts/Sofia/SofiaProLight-webfont.ttf') format('truetype'),
+         url('fonts/Sofia/SofiaProLight-webfont.svg#sofia_pro_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/************************************** GENERAL ***************************************/
+
+a {text-decoration: none; color: #58b3e7;}
+a:hover {text-decoration: underline;}
+
+p {margin-bottom: 10px;}
+
+img { max-width: 100%; height: auto; vertical-align: bottom; }
+
+h1 {
+	font-size: 28px;
+	font-weight: normal;
+	font-family: 'Rokkitt', serif;
+	padding: 10px 0;
+	color: #635a5a;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: lighter;
+	font-family: 'Rokkitt', serif;
+	padding: 10px 0;
+	color: #635a5a;
+}
+
+body {
+	background: #fff;
+	font-family: 'Open Sans', 'Avenir', sans-serif;
+	color: #8a8a8a;
+	font-size: 13px;
+}
+
+#container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#content {
+	margin: 120px 40px 0;
+	min-height: 400px;
+}
+
+/************************************** HEADER ***************************************/
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	padding-top: 20px;
+	background: #fff;
+	z-index: 1000;
+}
+
+header a:hover {
+	text-decoration: none;
+}
+
+#site-title {
+	font-family: 'Rokkitt', serif;
+	font-size: 48px;
+	color: #222;
+	text-transform: uppercase;
+}
+
+nav {
+	text-align: center;
+	margin: 10px;
+}
+
+nav li {
+	display: inline;
+}
+
+nav a {
+	font-size: 14px;
+	color: #8a8a8a;
+	margin: 0 20px;
+}
+
+nav a:hover {
+	color: #222;
+}
+
+
+/************************************** FOOTER ***************************************/
+
+footer {
+	text-align: center;
+	margin: 40px 0;
+}
+
+.socialicons {
+  margin-top: 20px;
+}
+
+.socialicons li {
+	display: inline;
+}
+
+.socialicons a {
+	padding: 5px;
+}
+
+
+/************************************** HOMEPAGE ***************************************/
+
+#gallery {
+	margin: 140px 60px;
+}
+
+.view {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.view p, .mask a {padding: 0;}
+
+.mask {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #000;
+    opacity: 0;
+}
+
+.mask span {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.mask a:hover {
+    text-decoration: none;
+}
+
+.view img {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.view:hover img {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.view:hover .mask {
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    -webkit-transition: opacity 0.4s linear;
+    -moz-transition: opacity 0.4s linear;
+    -o-transition: opacity 0.4s linear;
+    -ms-transition: opacity 0.4s linear;
+    transition: opacity 0.4s linear;
+}
+
+.view:hover a {
+    opacity: 1;
+}
+
+
+/************************************** RESPONSIVE GRID ***************************************/
+
+
+/*  SECTIONS  */
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float:left;
+    margin: 0;
+}
+
+.col:first-child { margin-left: 0 !important; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+                                                                   
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+	width: 100%;
+}
+.span_3_of_4 {
+	width: 75%;
+}
+.span_2_of_4 {
+	width: 50%;
+}
+.span_1_of_4 {
+	width: 25%;
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 {
+	width: 100%;
+}
+.span_2_of_3 {
+	width: 65.83%;
+}
+.span_1_of_3 {
+	width: 31.66%;
+}
+
+.margin_3 {
+	margin: 1% 0 1% 2.5%;
+}
+
+/*  GRID OF TWO  */
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 45%;
+}
+
+.margin_2 {
+	margin: 1% 0 1% 8%;
+}
+
+/************************************** FEATURED WORK - SINGLE ***************************************/
+
+#description {
+	position: fixed;
+	float: left;
+	width: 275px;
+}
+
+#featured-images {
+	margin: 0 0 0 350px;
+}
+
+#featured-images img {
+	display: block;
+	margin: 10px auto;
+}
+
+#featured-nav{
+	position: fixed;
+	float: left;
+	bottom: 120px;
+}
+
+
+/************************************** ABOUT ***************************************/
+
+#about {
+	padding: 0 100px;
+}
+
+#main-bio {
+	font-size: 18px;
+	color: #635a5a;
+	padding-bottom: 40px;
+}
+
+#main-bio a{
+	color: #635a5a;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+#main-bio a:hover {
+	color: #58b3e7;
+	-webkit-transition: color 0.4s ease;
+    -moz-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+    -ms-transition: color 0.4s ease;
+    transition: color 0.4s ease;
+
+}
+
+#about-contact {
+	padding-top: 20px;
+}
+
+/************************************** CONTACT ***************************************/
+
+/* Centers the form within the page */
+form 
+{
+    margin: 0 auto;
+    width: 522px;
+}
+
+/* Styles the text boxes */
+input, textarea {
+	width: 500px;
+	height: 20px;
+	background-color: #efefef;
+	border: 1px solid #dedede;
+	padding: 10px;
+	margin-top: 3px;
+	font-size: 12px;
+	color: #635a5a;
+
+	/* Target styles for mobile users */
+	-webkit-appearance: none; 
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+	border:1px solid #58b3e7;
+}
+
+/* Remove shadow effect on Firefox */
+input:invalid, textarea:invalid {
+	box-shadow: none;
+}
+
+input:invalid:focus, textarea:invalid:focus{
+	border:1px solid #e75858;
+}
+
+/* Styles the text area boxes (message field) */	
+textarea 
+{
+	height:213px;
+}
+
+/* Styles the submit button */
+#submit {
+	width: 127px;
+	height: 48px;
+	text-align: center;
+	border: 1px solid #dedede;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+/* Styles the submit hover */	
+#submit:hover {
+	color:#fff;
+	background-color: #58b3e7;
+	border: none;
+	opacity:0.9;
+}
+
+/* Styles the form */
+#submit-form {
+	text-align: center;
+	margin: 0 auto;
+	padding: 20px 0;
+	width: 500px;
+}
+
+#form-review {
+	text-align: left;
+	background: #efefef;
+	padding: 20px;
+}
+
+#form-review span {
+	font-size: 18px;
+	font-weight: normal;
+	font-family: 'Rokkitt', serif;
+	color: #635a5a;
+}
+
+/* Valid input. Error in submitting form */
+#form-error {
+	color: #e75858;
+}
+
+/* Form was sent successfully */ 
+#form-valid {
+	font-size: 28px;
+	font-weight: normal;
+	font-family: 'Rokkitt', serif;
+	padding: 10px 0;
+	color: #58b3e7;
+
+}
+
+/************************************** MEDIA QUERIES ***************************************/
+
+
+@media only screen and (max-width: 1024px) {
+
+	/************************************** RESPONSIVE GRID ***************************************/
+
+	.view {
+		max-width: 500px;
+		margin: 0 auto;
+	} 
+
+	.col, .col:first-child { 
+		margin: 0 auto;
+		float: none;
+	}
+
+	/*  GO FULL WIDTH AT LESS THAN 1024 PIXELS */
+	.span_4_of_4 {
+		width: 100%; 
+	}
+	.span_3_of_4 {
+		width: 100%; 
+	}
+	.span_2_of_4 {
+		width: 100%; 
+	}
+	.span_1_of_4 {
+		width: 100%;
+	}
+
+	/* Styles the About columns */
+	.span_3_of_3 {
+		width: 100%; 
+	}
+	.span_2_of_3 {
+		width: 100%; 
+	}
+	.span_1_of_3 {
+		width: 100%;
+	}
+
+	.span_2_of_2 {
+		width: 100%; 
+	}
+	.span_1_of_2 {
+		width: 100%;
+	}
+
+	/************************************** FEATURED WORK - SINGLE ***************************************/
+
+	#description {
+		position: relative;
+		float: none;
+		width: auto;
+		padding: 10px;
+	}
+
+	#featured-images {
+		margin: 0;
+	}
+
+	#featured-images img {
+		max-width: 100%;
+	}
+
+	#featured-nav{
+		position: relative;
+		float: none;
+		padding: 0px;
+		margin-top: 40px;
+		bottom: 0;
+		text-align: center;
+	}
+
+	/************************************** ABOUT ***************************************/
+	
+	#about {
+		padding: 0 10%;
+	}
+
+	/************************************** CONTACT ***************************************/
+	
+	/* Centers the form within the page */
+	form 
+	{
+	   max-width: 100%;
+	}
+
+	/* Styles the text boxes */
+	input, textarea, #submit-form {
+		width: 94%;
+	}
+
+	#submit-form {
+		max-width: 500px;
+	}
+}
+
+
+@media only screen and (max-width: 480px) {
+
+
+	/************************************** GENERAL ***************************************/
+	
+	#content, #gallery {
+		margin: 2%;
+	}
+
+	/************************************** HEADER ***************************************/
+
+	header {
+		position: relative;
+	}
+
+	/************************************** ABOUT ***************************************/
+	
+	#about {
+		padding: 10px;
+	}
+
+	/************************************** CONTACT ***************************************/
+	/* Centres the form within the page */
+	form 
+	{
+	    width: 90%;
+	}
+
+	/* Styles the text boxes */
+	input, textarea, #submit-form {
+		width: 93%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

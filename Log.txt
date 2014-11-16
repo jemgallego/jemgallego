@@ -1,0 +1,11 @@
+Change log / To do:
+
+- check cross browser compatibility
+- fix single pages
+- create favicon
+
+
+- create jem@jemgallego.com ???
+
+- add blog or experiments page?
+
