@@ -1,5 +1,5 @@
 /* 
-Theme Name: B&W 2014
+Theme Name: Portfolio 2014
 Author: Jem Gallego
  */
 
@@ -15,7 +15,6 @@ Author: Jem Gallego
     ++ FEATURED WORK - SINGLE
 	+ ABOUT
 	+ CONTACT
-
     + MEDIA QUERIES
 
 ***************************************************************************************/
@@ -34,6 +33,9 @@ Author: Jem Gallego
 }
 
 /************************************** GENERAL ***************************************/
+
+
+
 
 a {text-decoration: none; color: #58b3e7;}
 a:hover {text-decoration: underline;}
