@@ -9,3 +9,7 @@ Change log / To do:
 
 - add blog or experiments page?
 
+
+
+
+http://builtbybuffalo.com/feed

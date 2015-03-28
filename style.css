@@ -34,9 +34,6 @@ Author: Jem Gallego
 
 /************************************** GENERAL ***************************************/
 
-
-
-
 a {text-decoration: none; color: #58b3e7;}
 a:hover {text-decoration: underline;}
 
@@ -144,7 +141,7 @@ footer {
 /************************************** HOMEPAGE ***************************************/
 
 #gallery {
-	margin: 140px 60px;
+	margin: 140px 20px;
 }
 
 .view {
